@@ -33,7 +33,10 @@ namespace SpicyWater
                 if (letterPos >= crankSequence.Length)
                     letterPos = 0;
                 else letterPos++;
+                crankCurrent++;
             }
+            if (crankCurrent >= crankMax)
+                MinigameManager.Instance.minigame.gameWin = true;
 
         }
     }
